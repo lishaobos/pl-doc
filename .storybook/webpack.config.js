@@ -42,11 +42,11 @@ module.exports = ({ config, mode }) => {
             }],
             include: path.resolve(__dirname, '../src')
         },
-        // {
-        //     test: /\.scss$/,
-        //     use: ['style-loader', 'css-loader', 'sass-loader'],
-        //     include: path.resolve(__dirname, '../src'),
-        // },
+        {
+            test: /\.less$/,
+            use: ['style-loader', 'css-loader', 'sass-loader'],
+            include: path.resolve(__dirname, '../src'),
+        },
         {
             test: /\.scss$/,
             use: [
@@ -55,7 +55,9 @@ module.exports = ({ config, mode }) => {
                 {
                     loader: 'css-loader',
                     options: { 
-                        modules: true,
+                        modules: {
+                            localIdentName: '[local]-[hash:base64:5]',
+                        },
                         localsConvention: 'camelCase'
                     }
                 },

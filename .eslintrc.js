@@ -91,6 +91,7 @@ module.exports = {
       'no-dupe-class-members': 2, // 禁止类成员中出现重复的名称
       'no-dupe-keys': 2, // 禁止对象字面量中出现重复的 key
       'no-duplicate-case': 2, // 禁止出现重复的 case 标签
+      'no-empty': 0,
       'no-empty-character-class': 2, // 禁止在正则表达式中使用空字符集
       'no-empty-pattern': 2, // 禁止使用空解构模式
       'no-eval': 2, // 禁用 eval()
