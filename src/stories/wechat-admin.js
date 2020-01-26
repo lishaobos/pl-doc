@@ -318,14 +318,16 @@ storiesOf('WechatAdmin/File')
         }
       },
       template:
-      `<FileSelector
-        :boxWidth='boxWidth'
-        :boxHeight='boxHeight'
-        :listLength='listLength'
-        :uploadText='uploadText'
-        :marginLeft='marginLeft'
-        :borderRadius='borderRadius'
-      />
+      `<div>
+        <FileSelector
+            :boxWidth='boxWidth'
+            :boxHeight='boxHeight'
+            :listLength='listLength'
+            :uploadText='uploadText'
+            :marginLeft='marginLeft'
+            :borderRadius='borderRadius'
+        />
+      </div>
       `
     }
   }, {

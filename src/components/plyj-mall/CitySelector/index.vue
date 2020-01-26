@@ -130,7 +130,7 @@ export default {
   },
   async created() {
     try {
-      const { result } = await getCityListByParentId(0)
+      const { data: { result }} = await getCityListByParentId(0)
       this.provinceList = result || []
     } catch (e) {
       throw e
@@ -174,7 +174,7 @@ export default {
         code
       }
       try {
-        const { result } = await getCityListByParentId(code)
+        const { data: { result }} = await getCityListByParentId(code)
         this.cityList = result || []
       } catch (e) {
         throw e
@@ -190,7 +190,7 @@ export default {
         code
       }
       try {
-        const { result } = await getCityListByParentId(code)
+        const { data: { result }} = await getCityListByParentId(code)
         this.countiesList = result || []
         if (this.countiesList.length === 0) {
           this.$emit('select', [this.province, this.city])
@@ -210,7 +210,7 @@ export default {
         code
       }
       try {
-        const { result } = await getCityListByParentId(code)
+        const { data: { result }} = await getCityListByParentId(code)
         this.townList = result || []
         if (this.townList.length === 0) {
           this.$emit('select', [this.province, this.city, this.counties])

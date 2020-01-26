@@ -1,6 +1,6 @@
 <template>
   <div
-    class="file-selector"
+    :class="$style.fileSelector"
     @click="clickHandler"
     :style="{
       width: boxWidth + 'px',
@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style module lang="scss">
   .file-selector {
     display: inline-flex;
     flex-direction: column;

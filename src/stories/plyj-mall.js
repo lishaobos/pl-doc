@@ -11,19 +11,20 @@ storiesOf('PlyjMall')
       components: {
         CitySelector
       },
+      props: {
+        show: boolean('show', false)
+      },
       data() {
         return {
           showCitySelector: false
         }
       },
-      props: {
-        show: boolean('show', false)
-      },
       template:
       `<div>
-        <el-button @click='showCitySelector = true'>点击</el-button>
+        <el-input @focus='showCitySelector = true'>点击</el-input>
         <CitySelector
-        :show.sync="showCitySelector"
+        :show.sync='showCitySelector'
+        @select=''
         />
       </div>`
     }

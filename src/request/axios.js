@@ -1,3 +1,3 @@
-import axios from 'axios'
+import axios from './mock'
 
-export const getCityListByParentId = parentCode => axios.get(`/apis/v1/systemctl/location/parent/${parentCode}`)
+export const getCityListByParentId = parentCode => axios.get(`/apis/v1/systemctl/location/parent`)
