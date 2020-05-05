@@ -1,5 +1,6 @@
 <template>
   <svg
+    v-if="type === 'svg' && update"
     :class="$style.plSvg"
     aria-hidden="true"
     @click="clickHandler"
@@ -8,10 +9,17 @@
       height: truthHeight
     }"
     @hover="hoverHandler"
-    v-if="update"
   >
     <use :xlink:href="'#' + (tempName || name)" />
   </svg>
+  <img
+    v-else
+    :src="name"
+    :style="{ width: width ? width + 'px' : height ? 'auto' : 'none', height: height ? height + 'px' : width ? 'auto' : 'none' }"
+    alt=""
+    @hover="hoverHandler"
+    @click="clickHandler"
+  >
 </template>
 
 <script>
@@ -35,6 +43,11 @@ export default {
     height: {
       type: [Number, String],
       default: null
+    },
+    // 可以是img,此时，name就是图片的src
+    type: {
+      type: String,
+      default: 'svg'
     }
   },
   data() {
@@ -101,6 +114,7 @@ export default {
       this.$emit('hover', e)
     },
     async setFill(fill) {
+      if (this.type !== 'svg') return
       /**
        * 由于使用的是svg精灵，所以
        * 要使得fill属性生效，必须保证不存在行内fill属性 或者 修改行内fill属性
@@ -126,8 +140,10 @@ export default {
         const colors = clonedSvg.querySelectorAll('[color]')
         clonedSvg.setAttribute('id', this.tempName)
         clonedSvg.setAttribute('fill', fill)
-        for (const fill of fills) {
-          fill.setAttribute('fill', fill)
+        for (const fillEle of fills) {
+          if (fillEle.getAttribute('fill') !== 'none') {
+            fillEle.setAttribute('fill', fill)
+          }
         }
         for (const color of colors) {
           color.setAttribute('color', fill)
@@ -137,8 +153,9 @@ export default {
       }
     },
     clean() {
+      if (this.type !== 'svg') return
       if (this.svgParent) {
-        for (const k of Object.keys(this.clonedSvg)) {
+        for (let k of Object.keys(this.clonedSvg)) {
           try {
             if (this.clonedSvg[k]) {
               this.svgParent.appendChild(this.clonedSvg[k])

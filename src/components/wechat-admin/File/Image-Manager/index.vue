@@ -158,8 +158,8 @@
 
 <script>
 import { compress, upload, deleteImage, createObjectUrl, breakpointUpload } from '@wechatAdminStatic/upload-image'
-import ImageSelector from '../FileSelector'
-import EditImage from '../EditImage'
+import ImageSelector from '../File-Selector'
+import EditImage from '../Edit-Image'
 import Draggable from '../../Draggable'
 export default {
   name: 'PlUploadImage',

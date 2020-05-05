@@ -94,7 +94,7 @@
 
 <script>
 import { compress } from '@wechatAdminStatic/upload-image'
-import PlSvg from './../../PlSvg'
+import PlSvg from './../../Pl-Svg'
 let mainCtx = null
 // 临时canvas
 let tempCanvas = null

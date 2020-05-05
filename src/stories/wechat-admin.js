@@ -2,18 +2,18 @@ import { storiesOf } from '@storybook/vue';
 import { withKnobs, text, select, boolean, array, radios, object, color, number } from '@storybook/addon-knobs';
 
 // 日期选择器
-import DateRange from '@wechatAdminComponents/DateRange';
-import DateRangeReadme from '@wechatAdminComponents/DateRange/README.md';
-import DateRangeCode from '@wechatAdminComponents/DateRange/USAGE.md';
+import DateRange from '@wechatAdminComponents/Date-Range';
+import DateRangeReadme from '@wechatAdminComponents/Date-Range/README.md';
+import DateRangeCode from '@wechatAdminComponents/Date-Range/USAGE.md';
 
 // draggable 拖动
 import Draggable from '@wechatAdminComponents/Draggable'
 import DraggableReadme from '@wechatAdminComponents/Draggable/README.md';
 
 // icon 图标
-import PlSvg from '@wechatAdminComponents/PlSvg'
-import PlSvgReadme from '@wechatAdminComponents/PlSvg/README.md';
-import PlSvgCode from '@wechatAdminComponents/PlSvg/USAGE.md';
+import PlSvg from '@wechatAdminComponents/Pl-Svg'
+import PlSvgReadme from '@wechatAdminComponents/Pl-Svg/README.md';
+import PlSvgCode from '@wechatAdminComponents/Pl-Svg/USAGE.md';
 
 // 分享
 import Share from '@wechatAdminComponents/Share'
@@ -21,21 +21,21 @@ import ShareReadme from '@wechatAdminComponents/Share/README.md';
 import ShareCode from '@wechatAdminComponents/Share/USAGE.md';
 
 // 编辑图片
-import EditImage from '@wechatAdminComponents/File/EditImage'
-import EditImageReadme from '@wechatAdminComponents/File/EditImage/README.md';
-import EditImageCode from '@wechatAdminComponents/File/EditImage/USAGE.md';
+import EditImage from '@wechatAdminComponents/File/Edit-Image'
+import EditImageReadme from '@wechatAdminComponents/File/Edit-Image/README.md';
+import EditImageCode from '@wechatAdminComponents/File/Edit-Image/USAGE.md';
 
 // 文件选择
-import FileSelector from '@wechatAdminComponents/File/FileSelector'
-import FileSelectorReadme from '@wechatAdminComponents/File/FileSelector/README.md';
-import FileSelectorCode from '@wechatAdminComponents/File/FileSelector/USAGE.md';
+import FileSelector from '@wechatAdminComponents/File/File-Selector'
+import FileSelectorReadme from '@wechatAdminComponents/File/File-Selector/README.md';
+import FileSelectorCode from '@wechatAdminComponents/File/File-Selector/USAGE.md';
 
 // 上传组件
-import ImageManager from '@wechatAdminComponents/File/ImageManager'
-import ImageManagerReadme from '@wechatAdminComponents/File/ImageManager/README.md';
-import ImageManagerCode from '@wechatAdminComponents/File/ImageManager/USAGE.md';
+import ImageManager from '@wechatAdminComponents/File/Image-Manager'
+import ImageManagerReadme from '@wechatAdminComponents/File/Image-Manager/README.md';
+import ImageManagerCode from '@wechatAdminComponents/File/Image-Manager/USAGE.md';
 
-storiesOf('WechatAdmin')
+storiesOf('Wechat-Admin')
 //   // 全局公用
 //   .addParameters({
 //     readme: {
@@ -167,16 +167,19 @@ storiesOf('WechatAdmin')
       components: { PlSvg },
       props: {
         name: {
-          default: text('name', 'icon-jinru-c1d1c')
+          default: text('name', 'icon-coupon')
         },
         fill: {
           default: color('fill')
         },
         width: {
-          default: text('width', '')
+          default: text('width', '80')
         },
         height: {
-          default: text('height', '')
+          default: text('height', '80')
+        },
+        type: {
+          default: text('type', 'svg')
         }
       },
       template:
@@ -185,6 +188,7 @@ storiesOf('WechatAdmin')
         :fill='fill'
         :width='width'
         :height='height'
+        :type='type'
       />
       `
     }
@@ -208,9 +212,6 @@ storiesOf('WechatAdmin')
         // 二维码中心的缩略图
         thumbnail: {
           default: text('thumbnail', '')
-        },
-        show: {
-          default: boolean('show', false)
         }
       },
       data() {
@@ -237,7 +238,7 @@ storiesOf('WechatAdmin')
     }
   })
 
-storiesOf('WechatAdmin/File')
+storiesOf('Wechat-Admin/File')
   .addDecorator(withKnobs)
   // 编辑图片
   .add('Edit-Image', () => {

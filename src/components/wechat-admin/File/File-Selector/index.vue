@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import PlSvg from './../../PlSvg'
+import PlSvg from './../../Pl-Svg'
 export default {
   name: 'FileSelector',
   components: { PlSvg },
