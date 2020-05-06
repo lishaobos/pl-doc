@@ -1,8 +1,11 @@
 import Vue from 'vue';
+import PenglaiUI from './../src/components/pl-ui'
 import { configure, addDecorator, addParameters } from '@storybook/vue';
 import { addReadme } from 'storybook-readme/vue';
 import { themes, create } from '@storybook/theming';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
+Vue.use(PenglaiUI)
 
 const basicTheme = create({
   base: 'light',

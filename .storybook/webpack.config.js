@@ -20,6 +20,7 @@ module.exports = ({ config, mode }) => {
 
     // 别名
     let aliasConfig = {
+        '@': path.resolve(__dirname, '../src'),
         '@apis': path.resolve(__dirname, '../src/request/axios'),
         '@wechatAdminComponents': path.resolve(__dirname, '../src/components/wechat-admin'),
         '@wechatAdminStatic': path.resolve(__dirname, '../static/wechat-admin'),
@@ -44,7 +45,16 @@ module.exports = ({ config, mode }) => {
         },
         {
             test: /\.less$/,
-            use: ['style-loader', 'css-loader', 'sass-loader'],
+            use: [
+                'style-loader',
+                 'css-loader', 
+                 {
+                    loader: 'sass-loader',
+                    options: {
+                        prependData: `@import "@/components/pl-ui/assets/scss/config.scss";`
+                    }
+                 }
+                ],
             include: path.resolve(__dirname, '../src'),
         },
         {
@@ -83,16 +93,6 @@ module.exports = ({ config, mode }) => {
             ]
         }
     )
-
-    // config.module.rules.push({
-    //   test: /\.css$/,
-    //   use: ['style-loader', 'css-loader'],
-    // });
-
-    //  config.module.rules.push({
-    //   resourceQuery: /blockType=docs/,
-    //   use: ['storybook-readme/docs-loader', 'html-loader', 'markdown-loader'],
-    // });
 
     // 插件
     config.plugins.push(

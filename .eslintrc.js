@@ -109,6 +109,7 @@ module.exports = {
       'no-irregular-whitespace': 2, // 禁止在字符串和注释之外不规则的空白
       'no-iterator': 2, // 禁用 __iterator__ 属性
       'no-label-var': 2, // 不允许标签与变量同名
+      'no-prototype-builtins': 0,
       'no-labels': [2, {
         'allowLoop': false,
         'allowSwitch': false
