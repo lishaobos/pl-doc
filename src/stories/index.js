@@ -27,5 +27,6 @@ configureReadme({
 // `,
 });
 
+import './pl-ui'
 import './wechat-admin';
 import './plyj-mall'
