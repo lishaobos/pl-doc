@@ -242,6 +242,7 @@ export default {
       })
     },
     getData() {
+      // eslint-disable-next-line no-async-promise-executor
       return new Promise(async(resolve, reject) => {
         try {
           this.$emit('update:loading', true)
