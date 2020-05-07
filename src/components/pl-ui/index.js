@@ -1,24 +1,23 @@
 import './assets/scss/transition.scss'
 import './assets/scss/config.scss'
-import Button from './Button.vue'
-import Input from './Input.vue'
+import Button from './Button'
+import Input from './Input'
 import Tab from './Tab.vue'
 import Form from './Form'
 import FormItem from './Form-Item'
 import Radio from './Radio.vue'
-import List from './List.vue'
+import List from './List'
 import UploadImg from './Upload-Img.vue'
-import Fields from './Fields.vue'
-import Switch from './Switch.vue'
+import Fields from './Fields'
+import Switch from './Switch'
 import PlSvg from '@wechatAdminComponents/Pl-Svg'
 import MessageBox from './message-box'
-import Selector from './Selector.vue'
+import Selector from './Selector'
 import Checkbox from './checkbox/Checkbox.vue'
 import CheckboxGroup from './checkbox/Checkbox-Group.vue'
 import RadioComponent from './radio/Radio.vue'
 import RadioGroupComponent from './radio/Radio-Group.vue'
 import Popup from './Popup.vue'
-import Picker from './picker/Picker.vue'
 import Mask from './Mask.vue'
 
 // import CanvasVideo from './Canvas-Video.vue'
@@ -47,7 +46,6 @@ const components = [
   RadioComponent,
   RadioGroupComponent,
   Popup,
-  Picker,
   Timeline,
   TimelineItem,
   Mask

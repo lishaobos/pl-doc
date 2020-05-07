@@ -100,7 +100,7 @@
 </template>
 
 <script>
-import { toArray, hasUnicode } from './assets/js/unicode-to-array'
+import { toArray, hasUnicode } from '../assets/js/unicode-to-array'
 
 export default {
   name: 'PlInput',
