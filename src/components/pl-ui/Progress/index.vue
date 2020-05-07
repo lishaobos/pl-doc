@@ -36,7 +36,7 @@
 </template>
 <script>
 export default {
-  name: 'Progress',
+  name: 'PlProgress',
   props: {
     type: {
       type: String,

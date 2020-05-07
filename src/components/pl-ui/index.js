@@ -19,6 +19,7 @@ import RadioComponent from './radio/Radio.vue'
 import RadioGroupComponent from './radio/Radio-Group.vue'
 import Popup from './Popup.vue'
 import Mask from './Mask.vue'
+import Progress from './Progress'
 
 // import CanvasVideo from './Canvas-Video.vue'
 import { Timeline, TimelineItem } from './timeline'
@@ -48,7 +49,8 @@ const components = [
   Popup,
   Timeline,
   TimelineItem,
-  Mask
+  Mask,
+  Progress
 
   // CanvasVideo
 ]

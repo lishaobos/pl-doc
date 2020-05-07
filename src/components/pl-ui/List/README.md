@@ -30,7 +30,6 @@
 </script>
 ```
 
-
 #### Checkbox Attributes
 
 |参数|使用说明|类型|可选值|默认值|
