@@ -22,6 +22,14 @@ import FieldsReadme from '@/components/pl-ui/Fields/README.md'
 
 import ListReadme from '@/components/pl-ui/List/README.md'
 
+import ProgressReadme from '@/components/pl-ui/Progress/README.md'
+
+import TabReadme from '@/components/pl-ui/Tab/README.md'
+
+import PopupReadme from '@/components/pl-ui/Popup/README.md'
+
+import FormReadme from '@/components/pl-ui/Form/README.md'
+
 
 storiesOf('Pl-UI')
   .addDecorator(withKnobs)
@@ -259,5 +267,124 @@ storiesOf('Pl-UI')
   }, {
     readme: {
       content: ListReadme
+    }
+  })
+  .add('Progress', () => {
+    return {
+      data() {
+        return {
+          percentage: 10
+        }
+      },
+      methods: {
+        add() {
+          this.percentage < 100 ? this.percentage++ : ''
+        },
+        reduce() {
+          this.percentage > 0 ? this.percentage-- : ''
+        }
+      },
+      template:
+      `<div>
+        <div style='margin-bottom: 10px;'>
+            <ElButton @click='reduce'>-</Elbutton> 
+            <ElButton @click='add'>+</Elbutton>
+        </div>
+        <PlProgress :percentage='percentage' color='pink'/>
+      </div>`
+    }
+  }, {
+    readme: {
+      content: ProgressReadme
+    }
+  })
+  .add('Tab', () => {
+    return {
+      data() {
+        return {
+          activeId: 1,
+          tabs: [
+            { id: 1, name: '小猫' },
+            { id: 2, name: '小狗' },
+            { id: 3, name: '小猪' }
+          ]
+        }
+      },
+      template: `<PlTab  :tabs='tabs' :activeId='activeId' />`
+    }
+  }, {
+    readme: {
+      content: TabReadme
+    }
+  })
+  .add('Popup', () => {
+    return {
+      data() {
+        return {
+          show: false
+        }
+      },
+      template:
+      `<div>
+        <ElButton @click='show = true'>点我</ElButton>
+        <pl-popup :show.sync="show" title="活动规则">
+            <ul>
+                <li>1. 设置活动，活动期间该页面展示的所有组合购买商品均以组合折扣价位售卖</li>
+                <li>2. 活动期间不支持退款，不支持线上发票</li>
+                <li>3. 仅在该页面下单可享受优惠，其他页面点击或购物车购买不享受优惠</li>
+                <li>4. 结束以活动截止时间为准</li>
+            </ul>
+        </pl-popup>
+      </div>`
+    }
+  }, {
+    readme: {
+      content: PopupReadme
+    }
+  })
+  .add('Form', () => {
+    return {
+      data() {
+        return {
+          form: {
+            entName: ''
+          },
+          rules: {
+            entName: [{ required: true, message: '请输入单位名称', trigger: 'blur' }]
+          }
+        }
+      },
+      methods: {
+        submit() {
+          if (!this.$refs.form.validate()) return
+          alert('提交成功')
+        }
+      },
+      template:
+      `<div>
+        <pl-form
+        label-width="40"
+        :model="form"
+        :rules="rules"
+        ref="form"
+        >
+            <pl-form-item 
+                border 
+                label='名称' 
+                prop="entName" 
+            >
+                <pl-input
+                    size="middle"
+                    placeholder="单位名称"
+                    v-model="form.entName"
+                />
+            </pl-form-item>
+        </pl-form>
+        <pl-button @click='submit'>提交</pl-button>
+      </div>`
+    }
+  }, {
+    readme: {
+      content: FormReadme
     }
   })

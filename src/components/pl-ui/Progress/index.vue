@@ -82,6 +82,7 @@ export default {
     barStyle() {
       const style = {}
       style.width = `${this.percentage}%`
+      style.height = '100%'
       style.backgroundColor = this.getCurrentColor(this.percentage)
       return style
     },
