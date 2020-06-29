@@ -44,34 +44,48 @@ module.exports = ({ config, mode }) => {
             include: path.resolve(__dirname, '../src')
         },
         {
-            test: /\.less$/,
-            use: [
-                'style-loader',
-                 'css-loader', 
-                 {
-                    loader: 'sass-loader',
-                    options: {
-                        prependData: `@import "@/components/pl-ui/assets/scss/config.scss";`
-                    }
-                 }
-                ],
+            test: /\.scss$/,
+            oneOf: [
+                {
+                    resourceQuery: /module/,
+                    use: [
+                        'style-loader',
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                modules: {
+                                    localIdentName: '[local]-[hash:base64:5]',
+                                },
+                                localsConvention: 'camelCase',
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                prependData: `@import "@/components/pl-ui/assets/scss/config.scss";`
+                            }
+                        }
+                    ]
+                },
+                {
+                    use: [
+                        'style-loader',
+                        'css-loader',
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                prependData: `@import "@/components/pl-ui/assets/scss/config.scss";`
+                            }
+                        }
+                    ]
+                }
+            ],
             include: path.resolve(__dirname, '../src'),
         },
         {
             test: /\.scss$/,
+            resourceQuery: /scale/,
             use: [
-                // 'vue-style-loader',
-                'style-loader',
-                {
-                    loader: 'css-loader',
-                    options: { 
-                        modules: {
-                            localIdentName: '[local]-[hash:base64:5]',
-                        },
-                        localsConvention: 'camelCase'
-                    }
-                },
-                'sass-loader',
                 {
                     loader: 'postcss-loader',
                     options: {
@@ -89,7 +103,7 @@ module.exports = ({ config, mode }) => {
                             })
                         ]
                     }
-                },
+                }
             ]
         }
     )

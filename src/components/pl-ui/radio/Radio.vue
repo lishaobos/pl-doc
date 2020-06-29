@@ -120,7 +120,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 .radio {
     display: flex;
     align-items: center;

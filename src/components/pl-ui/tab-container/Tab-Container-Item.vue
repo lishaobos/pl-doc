@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style lang="less" module>
+<style scale lang="scss" module>
 .tab-container-item {
     flex-shrink: 0;
     width: 100%;

@@ -144,7 +144,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 
 .pl-img-list {
     display: inline-flex;

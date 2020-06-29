@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style module lang="scss">
+<style scale module lang="scss">
   .top-text {
     min-height: 104px;
     .left {

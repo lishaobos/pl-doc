@@ -262,7 +262,7 @@ export default {
 }
 </script>
 
-<style module lang="scss">
+<style scale module lang="scss">
   .city-selector {
     position: fixed;
     left: 50%;

@@ -798,7 +798,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 .m-image-crop {
     position: relative;
     display: inline-block;
@@ -898,7 +898,7 @@ export default {
 
 </style>
 
-<style module lang="scss">
+<style scale module lang="scss">
 .rotate {
     svg {
         width: 40px;

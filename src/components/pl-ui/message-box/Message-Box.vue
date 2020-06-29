@@ -191,7 +191,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 .message-box {
     position: fixed;
     top: 0;

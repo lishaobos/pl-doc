@@ -105,7 +105,7 @@ export default {
 }
 </script>
 
-<style module lang="scss">
+<style scale module lang="scss">
   .title {
     display: flex;
     justify-content: space-between;

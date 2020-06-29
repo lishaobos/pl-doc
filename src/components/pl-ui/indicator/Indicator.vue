@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 .pl-indicator {
     position: fixed;
     left: 0;

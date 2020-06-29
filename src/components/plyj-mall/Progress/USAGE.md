@@ -68,7 +68,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 .pl-progress {
   overflow: hidden;
   background-color: #FFF;

@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style module lang="scss">
+<style scale module lang="scss">
   .no-content {
     width: 100%;
     margin: 120px 0;

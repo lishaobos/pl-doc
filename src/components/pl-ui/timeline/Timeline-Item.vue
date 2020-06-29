@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 
 .pl-timeline-item {
     display: flex;

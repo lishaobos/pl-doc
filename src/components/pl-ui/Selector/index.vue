@@ -62,7 +62,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 .pl-selector {
     display: flex;
     flex: 1;

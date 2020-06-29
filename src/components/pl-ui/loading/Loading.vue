@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 .pl-loading {
     position: fixed;
     top: 0;

@@ -30,5 +30,5 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 </style>

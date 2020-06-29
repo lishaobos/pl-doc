@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
   .pl-radio {
     align-items: center;
     margin-right: 30px;

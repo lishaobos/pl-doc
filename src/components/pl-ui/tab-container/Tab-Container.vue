@@ -161,7 +161,7 @@ export default {
 }
 </script>
 
-<style lang="less" module>
+<style scale lang="scss" module>
 .tab-container {
     position: relative;
     overflow: hidden;
@@ -173,7 +173,7 @@ export default {
 }
 
 </style>
-<style lang="less" scoped>
+<style scale lang="scss" scoped>
 .swipe-transition {
     transition: transform 150ms ease-in-out;
 }

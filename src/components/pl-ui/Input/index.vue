@@ -253,7 +253,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style scale lang="scss">
 .pl-input {
     position: relative;
     display: inline-flex;

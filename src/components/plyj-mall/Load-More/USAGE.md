@@ -420,7 +420,7 @@ export default {
 }
 </script>
 
-<style module lang="scss">
+<style scale module lang="scss">
 .loadMore {
     position: relative;
     overflow: hidden;

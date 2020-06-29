@@ -69,7 +69,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style scale lang="scss">
   .pl-button {
     position: relative;
     border: none;

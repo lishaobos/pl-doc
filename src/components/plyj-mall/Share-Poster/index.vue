@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style scale scoped lang="scss">
   /* 海报样式 */
   .winning-prize {
     position: fixed;

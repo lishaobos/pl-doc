@@ -191,7 +191,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scale lang="scss">
 .pl-modal {
     display: flex;
     justify-content: center;

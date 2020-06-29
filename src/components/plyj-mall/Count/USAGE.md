@@ -97,7 +97,7 @@ export default {
 }
 </script>
 
-<style module lang="scss">
+<style scale module lang="scss">
   .count {
     position: relative;
     display: inline-flex;

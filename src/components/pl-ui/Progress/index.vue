@@ -174,7 +174,7 @@ export default {
 }
 </script>
 
-<style lang="less" module>
+<style scale lang="scss" module>
 .progress {
     position: relative;
     line-height: 1;
@@ -182,11 +182,6 @@ export default {
         flex: 1;
         width: 0;
         box-sizing: border-box;
-        // display: inline-block;
-        // margin-right: -55px;
-        // padding-right: 50px;
-        // vertical-align: middle;
-        // width: 100%;
         &-outer {
             position: relative;
             vertical-align: middle;
@@ -197,7 +192,6 @@ export default {
             position: absolute;
             left: 0;
             top: 0;
-            // text-align: right;
             height: 100%;
             line-height: 1;
             border-radius: 200px;
@@ -214,7 +208,6 @@ export default {
         margin-left: 20px;
         line-height: 1;
         font-size: 28px;
-        // color: $--color-text-regular;
     }
 }
 .bar {
